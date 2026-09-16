@@ -15,3 +15,10 @@ capability names, then scaffold responsibility-named components, hooks, API adap
 Read `../../rules/project-structure.md` and
 `../implement-react-vertical-slice/references/production-delivery.md` before selecting
 routing, state, data, accessibility, security, or test boundaries.
+
+Honor the project's development-runtime choice. For Docker development or an npm
+installation failure, read `references/dependency-runtime.md` before installing.
+Create the development runtime before running build checks; production packaging
+and CI follow a passing build. Record executable commands in the workflow's grouped
+test-command manifest and preserve the distinction between implementation checks
+and independent approval.

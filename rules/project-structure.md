@@ -85,9 +85,12 @@ Generation order:
 
 1. Resolve supported Node, React, TypeScript, router, and build-tool versions.
 2. Create strict configuration, environment validation, app assembly, routing,
-   dependency lock, and test foundations.
+   dependency lock, and test foundations. When Docker development is selected,
+   create or reuse the development Compose runtime before installing dependencies
+   or executing checks; root `compose.frontend.yaml` belongs to the frontend lease.
 3. Convert approved design evidence into semantic route/feature boundaries.
 4. Produce the PRD-to-feature map, then generate only requirement-backed features.
 5. Connect the generated typed API client and runtime-validate responses.
 6. Add unit, integration, accessibility, responsive, and visual tests.
-7. Add target-owned Docker and CI after the production build passes.
+7. Add production Docker packaging and CI after the production build passes.
+   The development Docker runtime from step 2 is already available for these checks.
