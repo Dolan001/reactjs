@@ -8,6 +8,11 @@ description: Independently verify changed React slices or frontend delivery agai
 Inspect the diff and run format, lint, types, affected units, production build, browser
 journeys, accessibility, responsive, and localized visual checks. Verify runtime API
 validation and required states. Capture evidence; do not edit source.
+Start the verified backend and disposable PostgreSQL environment, seed the declared deterministic
+dataset, and exercise the generated client through real HTTP. Require authenticated success,
+negative, authorization, persistence round-trip, error mapping, and cleanup. Record current backend
+evidence and OpenAPI hashes in `.ai/evidence/client-integration/frontend.json`. Fixtures cannot pass
+this integration check.
 Use the project's declared runtime and registered command groups. For Docker
 projects, verify inside the frontend containers; do not infer missing dependencies
 from an absent host node_modules directory. Check the lockfile with a clean install
