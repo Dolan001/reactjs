@@ -50,7 +50,9 @@
     }
   ],
   "source_rules": [
-    {"id": "no-reusable-token-in-websocket-url", "globs": ["src/**/*.ts", "src/**/*.tsx"], "pattern": "(?:access_?token|jwt|bearer)=", "ignore_case": true, "scan_strings": true, "message": "Do not place reusable credentials in WebSocket URLs."}
+    {"id": "no-reusable-token-in-websocket-url", "globs": ["src/**/*.ts", "src/**/*.tsx"], "pattern": "(?:access_?token|jwt|bearer)=", "ignore_case": true, "scan_strings": true, "message": "Do not place reusable credentials in WebSocket URLs."},
+    {"id": "no-approved-html-runtime-import", "globs": ["src/**/*.ts", "src/**/*.tsx"], "pattern": "(?:HTML/approved|\\.html\\?raw)", "ignore_case": false, "scan_strings": true, "message": "Approved HTML is reference evidence and must not be imported into the production runtime."},
+    {"id": "no-unsafe-html-injection", "globs": ["src/**/*.ts", "src/**/*.tsx"], "pattern": "(?:dangerouslySetInnerHTML|\\.innerHTML\\b)", "ignore_case": false, "scan_strings": false, "message": "Compose semantic React elements instead of injecting HTML strings into the production DOM."}
   ],
   "feature_path_pattern": "src/features/<feature>",
   "module_path_pattern": "src/features/<module>",
