@@ -59,19 +59,13 @@
   "module_naming": {
     "style": "kebab-case",
     "ambiguous_names": ["identity", "work", "operations", "data-management", "management", "collaboration"],
-    "familiar_fallback_names": ["accounts", "authentications", "users", "notifications", "articles", "blog", "posts", "tasks", "todos", "webhooks", "chat", "files", "attachments", "payments", "orders", "products", "reports"],
+    "familiar_fallback_names": ["accounts", "authentications", "users", "notifications", "articles", "blog", "posts", "tasks", "todos", "webhooks", "chat", "files", "attachments", "payments", "orders", "products", "reports", "public-site", "design-fidelity"],
     "responsibility_packages": [],
     "max_lines": [
       {"globs": ["*.tsx", "components/*.tsx", "hooks/*.ts", "hooks/*.tsx", "api/*.ts"], "maximum": 250}
     ]
   },
-  "required_feature_paths": [
-    "components",
-    "hooks",
-    "schemas.ts",
-    "types.ts",
-    "tests"
-  ],
+  "required_feature_paths": [],
   "forbidden_patterns": [
     "backend business logic in browser code",
     "unvalidated network response",

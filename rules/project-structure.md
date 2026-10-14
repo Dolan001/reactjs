@@ -33,11 +33,8 @@ apps/frontend/
 │   │   └── <FeatureRoute>.tsx
 │   ├── features/
 │   │   └── <feature>/
-│   │       ├── components/
-│   │       ├── hooks/
-│   │       ├── schemas.ts
-│   │       ├── types.ts
-│   │       └── tests/
+│   │       ├── <feature source>
+│   │       └── <only the boundaries used by this feature>/
 │   ├── components/
 │   │   ├── ui/
 │   │   └── shared/
@@ -77,6 +74,8 @@ Naming and growth rules:
 - Use kebab-case feature directories and responsibility-based PascalCase components: for example,
   `features/authentications/components/SignInForm.tsx` and `routes/TasksRoute.tsx`. Avoid
   `DataComponent`, `MainView`, `Helper`, catch-all `index.tsx` implementations, and numbered names.
+- Create `components`, `hooks`, schemas, types, and test boundaries only when the feature owns that
+  responsibility. Do not add empty directories or placeholder files to satisfy a fixed shape.
 - Route files compose feature screens; they do not contain a whole feature. Split components,
   hooks, API adapters, schemas, state, and tests by behavior. Keep route/feature source files at
   most 250 lines and preserve accessible states and focused tests during every split.
